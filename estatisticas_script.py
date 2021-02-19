@@ -1,3 +1,5 @@
+# Módulo Python denominado “estatisticas_script.py”
+
 def maximo(lista):
     valores = [float(str(val.strip()).replace(",",".")) for val in lista]
     OrdemDecrescente = sorted(valores, reverse=True)
