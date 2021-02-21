@@ -30,7 +30,6 @@ print(est.topx(df,x))
 
 #normalizacao por 100mil habitantes
 print('adicionando quantidade de casos por 100.000 habitantes:')
-FN= df['Total_cases']*100000/df['Population']
 FN=est.normalizado(df,'Total_cases','Population')
 df['Total_cases_per_100mil']= FN
 print(df)
