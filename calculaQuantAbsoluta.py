@@ -13,6 +13,7 @@ arquivo = sys.argv[1]              #calculaQuantAbsoluta.py
 coefm = float(sys.argv[2])          #coeficiente_m
 coefb= float(sys.argv[3])         #coeficient_b
 
+
 #2 - Crie um dataframe nomeado como “df” para a tabela Excel passada como parâmetro;
                     #arquivo
 with pd.ExcelFile(arquivo) as xlsx:
@@ -23,7 +24,7 @@ with pd.ExcelFile(arquivo) as xlsx:
 #3 - Crie um novo dataframe nomeado como “df_q” que contém as colunas “Sample_Name”, “Target_Name”,
 # “Stage” “CT” e “Quantity”, onde Quantity é calculado para cada RNA de interesse usando a Equação 2.
 
-QT = 10**((df['CT']- coefm )/ coefb )
+QT = 10**((df['CT']- coefb )/ coefm )
 
 df['Quantity']=QT
 
