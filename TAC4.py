@@ -12,9 +12,19 @@ print(f'A sequencia de proteinas é: {proteinas}')
 
 
 
+#   2-   arquivo fasta
+# Escreva um programa Python que pegue o arquivo sequencias.fasta e escreva N arquivos FASTA
+# contendo em cada arquivo apenas uma sequência de sequencias.fasta, chamados de sequência_i.fasta
+# (onde i varia de 1 a N).
 
-
-
+n=0
+refArquivoEntrada1 = open("sequencias.fasta", "r")
+for i in SeqIO.parse(refArquivoEntrada1, "fasta"):
+    n+=1
+    saida=open('sequencia_'+ str(n)+'.fasta',"w")
+    saida.write(str(i.seq))
+refArquivoEntrada1.close()
+saida.close()
 
 
 
