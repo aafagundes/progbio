@@ -18,8 +18,8 @@ print(f'A sequencia de proteinas é: {proteinas}')
 # (onde i varia de 1 a N).
 
 n=0
-refArquivoEntrada1 = open("sequencias.fasta", "r")
-for i in SeqIO.parse(refArquivoEntrada1, "fasta"):
+refArquivoEntrada1 = open("sequencias.fasta")
+for i in SeqIO.parse(refArquivoEntrada1):
     n+=1
     saida=open('sequencia_'+ str(n)+'.fasta',"w")
     saida.write(str(i.seq))
