@@ -1,4 +1,15 @@
 
+#autora:Andressa Andrade Fagundes
+#data:04/03
+#versão:01
+
+from Bio.Seq import Seq
+from Bio import SeqIO
+from Bio.Blast.Applications import NcbiblastxCommandline
+import pandas as pd
+
+
+
 #  1-  Escreva um programa Python que peça ao usuário uma sequência de DNA e imprima a sequência de mRNA e a sequência de proteína correspondentes
 stringSeq=input('Digite uma sequencia de DNA').upper()
 sequencia=Seq(stringSeq)
